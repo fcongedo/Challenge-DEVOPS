@@ -12,3 +12,6 @@ sudo sh ./get-docker.sh
 sudo groupadd docker
 sudo usermod -aG docker vagrant
 newgrp docker
+
+#Clone repo
+git clone https://github.com/fcongedo/Challenge-DEVOPS
