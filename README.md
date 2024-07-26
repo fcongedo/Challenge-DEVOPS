@@ -78,7 +78,7 @@ Para ejecutar ahora los scripts debemos ubicarnos en el la siguiente dirección
 
 2. **Correr la imagen**: Ejecutamos el siguiente comando:
    ```bash
-   docker run -d -p 8082:80 --name mi-contenedor-website-apache website-desafio:1.0
+   docker run -d -p 8082:80 --name mi-contenedor-website-apache fcongedo/website-desafio:1
    ```
 
 
