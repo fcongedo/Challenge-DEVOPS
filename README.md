@@ -35,21 +35,33 @@ Para ejecutar ahora los scripts debemos ubicarnos en el la siguiente dirección
    ```
    (‘Hola’ es la palabra que el script buscará en los archivos.)
 
-2. **Ejecutar menu**:Para ejecutar el script `menu.sh`, debemos usar el comando:
+
+
+2. **Ejecutar menu**:Para ejecutar el script `menu.sh, debemos usar el comando:
    ```bash
    ./menu
    ```
+ Al ejecutar el script `menu.sh`, se mostrará un menú con las siguientes opciones:
+ 
+   1.`Ver la lista de archivos`: Muestra todos los archivos en el directorio actual.
 
-2. **Ejecutar buscar_replazar.sh**: Para ejecutar el `script menu.sh`, debemos usar el comando:
+   2.`Copiar un archivo`: Permite copiar un archivo especificado a una nueva ubicación.
+
+   3.`Eliminar un archivo`: Permite eliminar un archivo especificado del directorio.
+  
+   4.`Salir: Cierra el menú` y termina el script.
+
+
+3. **Ejecutar buscar_replazar.sh**: Para ejecutar el `script menu.sh`, debemos usar el comando:
    ```bash
    ./buscar_remplazar.sh archivo.txt "ejemplo" "demostración"
    ```
    (Donde “ejemplo” es la palabra a reemplazar por “demostración”)
 
-   
- 
+
+
  ## Paso 3: Docker
- 1. **Crear imagen de manera manual**: Debemos situarnos en el directorio `home/vagrant/Challenge-DEVOPS/Docker`y debemos usar el siguiente comando:
+1. **Crear imagen de manera manual**: Debemos situarnos en el directorio `home/vagrant/Challenge-DEVOPS/Docker`y debemos usar el siguiente comando:
      ```bash
       docker build -t website-apache:1.0 .
      ```
@@ -69,6 +81,8 @@ Para ejecutar ahora los scripts debemos ubicarnos en el la siguiente dirección
    docker run -d -p 8082:80 --name mi-contenedor-website-apache website-desafio:1.0
    ```
 
+
+
   ## Links
 
   ### Repositorio de Imágenes de Docker
@@ -80,3 +94,14 @@ El [Repositorio de imágenes de Docker](https://hub.docker.com/r/fcongedo/websit
 - Encontrar instrucciones para la descarga y uso de las imágenes.
 
 Asegúrate de revisar la documentación en la página del repositorio para obtener detalles adicionales y actualizaciones sobre las imágenes.
+
+
+
+## Archivos PDF Disponibles
+
+En el repositorio de Docker también encontrarás dos archivos PDF importantes:
+
+- **`Challenge DEVOPS.pdf`**: Contiene las consignas del desafío.
+- **`Instructivo-challenge-DEVOPS.pdf`**: Es un instructivo paso a paso para la resolución del desafío.
+
+Estos documentos te proporcionarán toda la información necesaria para comprender y completar el desafío con éxito.
