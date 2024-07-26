@@ -97,6 +97,9 @@ Vagrant.configure("2") do |config|
               /home/vagrant/Documentos/Proyectos/TiendaOnline/código/scripts \
               /home/vagrant/Documentos/Proyectos/TiendaOnline/documentación \
               /home/vagrant/Documentos/Proyectos/TiendaOnline/pruebas
+
+              # Cambiar la propiedad del directorio para el usuario vagrant
+    chown -R vagrant:vagrant /home/vagrant/Documentos/Proyectos
    SHELL
 
   # Ejecutar el script de bootstrap para instalar aplicaciones
