@@ -74,8 +74,31 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
-   config.vm.provision "shell",path: "bootstrap.sh"
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
+   config.vm.provision "shell", inline: <<-SHELL
+     # Crear directorios necesarios
+     mkdir -p /home/vagrant/Documentos/Proyectos/BlogPersonal \
+              /home/vagrant/Documentos/Proyectos/BlogPersonal/artículos \
+              /home/vagrant/Documentos/Proyectos/BlogPersonal/borradores \
+              /home/vagrant/Documentos/Proyectos/BlogPersonal/imágenes \
+              /home/vagrant/Documentos/Proyectos/BlogPersonal/plantillas \
+              /home/vagrant/Documentos/Proyectos/ProyectoAppMovil \
+              /home/vagrant/Documentos/Proyectos/ProyectoAppMovil/android \
+              /home/vagrant/Documentos/Proyectos/ProyectoAppMovil/documentación \
+              /home/vagrant/Documentos/Proyectos/ProyectoAppMovil/ios \
+              /home/vagrant/Documentos/Proyectos/ProyectoAppMovil/recursos \
+              /home/vagrant/Documentos/Proyectos/TiendaOnline \
+              /home/vagrant/Documentos/Proyectos/TiendaOnline/código/backend/controllers \
+              /home/vagrant/Documentos/Proyectos/TiendaOnline/código/backend/models \
+              /home/vagrant/Documentos/Proyectos/TiendaOnline/código/backend/routes \
+              /home/vagrant/Documentos/Proyectos/TiendaOnline/código/backend/views \
+              /home/vagrant/Documentos/Proyectos/TiendaOnline/código/frontend/assets/css \
+              /home/vagrant/Documentos/Proyectos/TiendaOnline/código/frontend/assets/js \
+              /home/vagrant/Documentos/Proyectos/TiendaOnline/código/frontend/components \
+              /home/vagrant/Documentos/Proyectos/TiendaOnline/código/scripts \
+              /home/vagrant/Documentos/Proyectos/TiendaOnline/documentación \
+              /home/vagrant/Documentos/Proyectos/TiendaOnline/pruebas
+   SHELL
+
+  # Ejecutar el script de bootstrap para instalar aplicaciones
+   config.vm.provision "shell", path: "bootstrap.sh"
 end
